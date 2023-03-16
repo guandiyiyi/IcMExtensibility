@@ -1,4 +1,4 @@
-# Create React App with module federation
+# React App with module federation
 
 This example demos a basic host application loading remote component. It's a forked version of the module federation example in https://github.com/module-federation/module-federation-examples/tree/master/cra-react-app-rewired, but added integration with the .NET core API application to get cards data in card component.
 
