@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       <header className="App-header" data-e2e="REMOTE_COMPONENT_INFO">
         Remote Application
-        <Card></Card>
+        <Card incident={{ Id: 2 }} token={""}></Card>
       </header>
     </div>
   );

@@ -1,17 +1,23 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 import { getCards } from "../foundation/getCards";
 import { ICard } from "../foundation/ICard";
 
-export const Card = () => {
-  const cardId: number = 1;
+interface IProps {
+  incident: any;
+  token: string;
+}
+
+export const Card = ({ incident, token }: IProps) => {
   const [toDoCard, setToDoCard] = useState<ICard>({});
 
   useEffect(() => {
-    getCards(cardId).then((response: ICard) => {
-      setToDoCard(response);
-    });
-  }, []);
+    if (incident) {
+      getCards(incident.Id, token).then((response: ICard) => {
+        setToDoCard(response);
+      });
+    }
+  }, [incident, token]);
 
   return (
     <div

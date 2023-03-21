@@ -11,7 +11,7 @@ module.exports = function (config, env) {
       (module.exports = {
         name: "host",
         remotes: {
-          remote: `galileo@http://localhost:3005/remoteEntry.js`,
+          remote: `remoteInsights@http://localhost:3005/remoteEntry.js`,
         },
         shared: {
           ...dependencies,

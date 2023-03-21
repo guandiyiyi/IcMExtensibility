@@ -9,7 +9,7 @@ module.exports = function (config, env) {
   config.plugins.push(
     new ModuleFederationPlugin(
       (module.exports = {
-        name: "galileo",
+        name: "remoteInsights",
         exposes: {
           "./Card": "./src/components/Card",
         },
